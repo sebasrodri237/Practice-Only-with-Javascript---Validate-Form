@@ -1,0 +1,21 @@
+.container{
+
+    width: 100vw;
+    height: auto;
+    display: grid;
+    grid-template-rows: 50px 150px 250px 280px;
+    grid-template-columns: 25vw 50vw 25vw;
+    grid-template-areas: " . . . "
+                         " . main-title . "
+                         " . form . "
+                         " . form . ";
+}
+
+.main-title{
+
+    grid-area: main-title;
+}
+.form{
+
+    grid-area: form;
+}
