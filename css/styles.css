@@ -1,0 +1,39 @@
+body{
+
+    font-family: 'Roboto', sans-serif;
+}
+.main-title{
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 900;
+}
+.form{
+
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.input{
+
+    border-radius: 10px;
+}
+.terms{
+
+    display: flex;
+    justify-content: space-between;
+    width: 220px;
+}
+.terms__checkbox{
+    
+    margin: 0;
+}
+.terms__text{
+
+    margin: 0;
+    font-size: 14px;
+    font-weight: 600;
+}
