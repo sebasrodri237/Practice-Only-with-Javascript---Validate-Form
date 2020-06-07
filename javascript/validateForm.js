@@ -39,7 +39,7 @@ class form{
 
             alert('The name field cannot be empty.');
             e.preventDefault();
-            input[this.dataInput.name].style.boxShadow = "0 0 1.5px 1px red";
+            input[this.inputOrder.name].style.boxShadow = "0 0 1.5px 1px red";
         }
     }
     validateAge(e){
@@ -47,7 +47,7 @@ class form{
         if(Number.isNaN(this.data.age.value) || this.data.age.value == "" ){
             alert('The age field cannot be empty or must be a integer number.');
             e.preventDefault();
-            input[this.dataInput.age].style.boxShadow = "0 0 1.5px 1px red";
+            input[this.inputOrder.age].style.boxShadow = "0 0 1.5px 1px red";
         }
     }
     validateEmail(e){
@@ -57,7 +57,7 @@ class form{
         if (!mailformat.test(this.data.email.value) || this.data.email.value == "" ){
             alert('The email field cannot be empty or you have entered an invalid email address.');
             e.preventDefault();
-            input[this.dataInput.email].style.boxShadow = "0 0 1.5px 1px red";
+            input[this.inputOrder.email].style.boxShadow = "0 0 1.5px 1px red";
         } 
     }
     validatePassword(e){
@@ -66,7 +66,7 @@ class form{
 
             alert('The password field cannot be empty or the password have to contain  only 7-16 characters.');
             e.preventDefault();
-            input[this.dataInput.password].style.boxShadow = "0 0 1.5px 1px red";
+            input[this.inputOrder.password].style.boxShadow = "0 0 1.5px 1px red";
         }
     }
     numberOfCharacters(passwordLength){
