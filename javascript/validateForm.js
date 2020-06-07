@@ -1,4 +1,5 @@
 const myform = document.getElementById('myform');
+const input = document.getElementsByClassName('input');
 const name = document.getElementById('name');
 const age = document.getElementById('age');
 const email = document.getElementById('email');
@@ -18,6 +19,14 @@ class form{
             password,
             checkbox
         }
+        this.inputOrder = {
+
+            name: 0,
+            age: 1,
+            email: 2,
+            password: 3,
+            checkbox: 4
+        }
         this.validateName(e);
         this.validateAge(e);
         this.validateEmail(e);
@@ -30,6 +39,7 @@ class form{
 
             alert('The name field cannot be empty.');
             e.preventDefault();
+            input[this.dataInput.name].style.boxShadow = "0 0 1.5px 1px red";
         }
     }
     validateAge(e){
@@ -37,6 +47,7 @@ class form{
         if(Number.isNaN(this.data.age.value) || this.data.age.value == "" ){
             alert('The age field cannot be empty or must be a integer number.');
             e.preventDefault();
+            input[this.dataInput.age].style.boxShadow = "0 0 1.5px 1px red";
         }
     }
     validateEmail(e){
@@ -46,6 +57,7 @@ class form{
         if (!mailformat.test(this.data.email.value) || this.data.email.value == "" ){
             alert('The email field cannot be empty or you have entered an invalid email address.');
             e.preventDefault();
+            input[this.dataInput.email].style.boxShadow = "0 0 1.5px 1px red";
         } 
     }
     validatePassword(e){
@@ -54,6 +66,7 @@ class form{
 
             alert('The password field cannot be empty or the password have to contain  only 7-16 characters.');
             e.preventDefault();
+            input[this.dataInput.password].style.boxShadow = "0 0 1.5px 1px red";
         }
     }
     numberOfCharacters(passwordLength){
